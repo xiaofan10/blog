@@ -12,6 +12,77 @@
     <h4>标题</h4>
     <h5>标题</h5>
     <h6>标题</h6>
-    <script type="text/javascript" src="./src/main.js"></script>
+    <form name="form">
+      <input type="text" name="text" maxlength="12" value="123123" />
+      text
+      <br />
+      <input type="password" autocomplete="true" />
+      password
+      <br />
+      <input type="checkbox" />
+      checkbox
+      <br />
+      <input type="radio" />
+      radio
+      <br />
+      <input type="submit" />
+      submit
+      <br />
+      <input type="reset" />
+      reset
+      <br />
+      <input type="email" />
+      email
+      <br />
+      <input type="file" />
+      file
+      <br />
+      <input type="number" />
+      number
+      <br />
+      <input type="date" />
+      date
+      <br />
+      <input type="datetime-local" />
+      datetime-local
+      <br />
+      <input type="time" />
+      time
+      <br />
+      <input type="month" />
+      month
+      <br />
+      <input type="week" />
+      week
+      <br />
+      <input type="tel" />
+      tel
+      <br />
+      <input type="color" />
+      color
+      <br />
+      <input type="range" />
+      range
+      <br />
+      <input type="search" />
+      search
+      <br />
+      <input type="hidden" />
+      hidden
+      <br />
+      <textarea>初始值</textarea>
+    </form>
+    <script>
+      const form = document.forms['form']
+      const textInput = form.elements['text']
+      textInput.addEventListener('focus', e => {
+        // event.target.select()
+        event.target.selectionStart = 2
+        event.target.selectionEnd = 3
+        // console.log(textInput.selectionStart, textInput.selectionEnd)
+      })
+    </script>
+    <!-- <script type="text/javascript" src="./src/main.js"></script> -->
+    <script type="module" src="/src/main"></script>
   </body>
 </html>
